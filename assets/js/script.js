@@ -16,7 +16,10 @@
   ];
 
   // Gallery (16 images)
-  const GALLERY = Array.from({ length: 16 }, (_, i) => `./nail-${i + 1}.webp`);
+  const GALLERY = Array.from(
+    { length: 16 },
+    (_, i) => `assets/images/gallery/nail-${i + 1}.webp`,
+  );
 
   // Slots independent of services
   const SLOT_CONFIG = {
