@@ -64,7 +64,7 @@
   const state = {
     selectedServiceIds: new Set(),
     selectedDayKey: "",
-    selectedTimeIso: "",
+    selectedTimeMin: null, // number | null
 
     galleryIndex: 0,
     autoTimer: null,
@@ -97,6 +97,13 @@
     return { weekday, md };
   }
 
+  function dateFromDayKeyAndMinute(dayKey, minute) {
+    const d = fromDayKey(dayKey);
+    d.setHours(0, 0, 0, 0);
+    d.setMinutes(minute);
+    return d; // local time
+  }
+
   function timeFa(date) {
     return date.toLocaleTimeString("fa-IR", {
       hour: "2-digit",
@@ -123,10 +130,13 @@
   }
 
   function selectedDatetimeLabel() {
-    if (!state.selectedDayKey || !state.selectedTimeIso) return "—";
+    if (!state.selectedDayKey || state.selectedTimeMin == null) return "—";
     const { weekday, md } = dateFaShort(state.selectedDayKey);
-    const timePart = timeFa(new Date(state.selectedTimeIso));
-    return `${weekday} ${md} - ${timePart}`;
+    const dt = dateFromDayKeyAndMinute(
+      state.selectedDayKey,
+      state.selectedTimeMin,
+    );
+    return `${weekday} ${md} - ${timeFa(dt)}`;
   }
 
   // =========================
@@ -253,7 +263,7 @@
 
     if (!state.selectedDayKey || !days.includes(state.selectedDayKey)) {
       state.selectedDayKey = days[0];
-      state.selectedTimeIso = "";
+      state.selectedTimeMin = null;
     }
 
     days.forEach((dayKey) => {
@@ -271,7 +281,7 @@
 
       chip.addEventListener("click", () => {
         state.selectedDayKey = dayKey;
-        state.selectedTimeIso = "";
+        state.selectedTimeMin = null;
         renderDateChips();
         renderTimeChips();
         syncSummary();
@@ -299,29 +309,35 @@
 
     if (!slots.length) {
       dom.timeChips.innerHTML = `<div class="helper-text">برای این روز، زمان پیشنهادی موجود نیست. روز دیگری انتخاب کن.</div>`;
-      state.selectedTimeIso = "";
+      state.selectedTimeMin = null;
       return;
     }
 
-    // ensure selection
-    if (!state.selectedTimeIso) state.selectedTimeIso = slots[0].toISOString();
-    else if (!slots.some((s) => s.toISOString() === state.selectedTimeIso))
-      state.selectedTimeIso = slots[0].toISOString();
+    // ensure selection (store minute-of-day)
+    if (state.selectedTimeMin == null)
+      state.selectedTimeMin = slots[0].getHours() * 60 + slots[0].getMinutes();
+    else {
+      const slotMins = slots.map((s) => s.getHours() * 60 + s.getMinutes());
+      if (!slotMins.includes(state.selectedTimeMin))
+        state.selectedTimeMin = slotMins[0];
+    }
 
     slots.forEach((start) => {
-      const iso = start.toISOString();
+      const minute = start.getHours() * 60 + start.getMinutes();
+
       const chip = document.createElement("button");
       chip.type = "button";
       chip.className =
-        "chip time-chip" + (state.selectedTimeIso === iso ? " selected" : "");
+        "chip time-chip" +
+        (state.selectedTimeMin === minute ? " selected" : "");
 
       chip.innerHTML = `
-        <span class="chip-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
-        <span>${timeFa(start)}</span>
-      `;
+    <span class="chip-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+    <span>${timeFa(start)}</span>
+  `;
 
       chip.addEventListener("click", () => {
-        state.selectedTimeIso = iso;
+        state.selectedTimeMin = minute;
         renderTimeChips();
         syncSummary();
       });
@@ -343,11 +359,15 @@
   function buildWhatsappMessage() {
     const services = selectedServicesLabel();
     if (services === "—") return null;
-    if (!state.selectedDayKey || !state.selectedTimeIso) return null;
+    if (!state.selectedDayKey || state.selectedTimeMin == null) return null;
 
     const { weekday, md } = dateFaShort(state.selectedDayKey);
     const dateLabel = `${weekday} ${md}`;
-    const timeLabel = timeFa(new Date(state.selectedTimeIso));
+    const dt = dateFromDayKeyAndMinute(
+      state.selectedDayKey,
+      state.selectedTimeMin,
+    );
+    const timeLabel = timeFa(dt);
     const note = (dom.bookingNote?.value || "").trim();
 
     return `سلام عزیزم 🌸

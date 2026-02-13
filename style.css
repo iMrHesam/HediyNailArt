@@ -119,7 +119,6 @@ button:active {
   height: 64px;
   padding: 12px;
   background: rgba(255, 255, 255, 0.55);
-  border-bottom: 1px solid rgba(241, 209, 225, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgb(241, 209, 225);
   display: flex;
