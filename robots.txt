@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imrhesam.github.io/hediynailart/sitemap.xml
