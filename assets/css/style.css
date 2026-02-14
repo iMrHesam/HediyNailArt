@@ -16,8 +16,8 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: rgb(255, 245, 241);
-  color: rgb(88, 48, 110);
+  background: rgb(255, 250, 248);
+  color: rgb(63, 33, 84);
   direction: rtl;
   font-size: 15px;
   display: flex;
@@ -55,8 +55,8 @@ button:active {
   width: 100%;
   max-width: 800px;
   height: 100%;
-  background: rgb(255, 245, 241);
-  color: rgb(88, 48, 110);
+  background: rgb(255, 250, 248);
+  color: rgb(63, 33, 84);
   direction: rtl;
   font-size: 15px;
   overflow-y: auto;
@@ -68,9 +68,9 @@ button:active {
   max-width: 776px;
   height: auto;
   padding: 12px;
-  background: rgb(255, 255, 255);
+  background: rgb(255, 250, 248);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,10 +92,10 @@ button:active {
 .toast-icon {
   width: 40px;
   height: 40px;
-  background: rgb(252, 233, 243);
+  background: rgba(234, 92, 157, 0.12);
   color: rgb(234, 92, 157);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(234, 92, 157, 0.25);
   font-size: 20px;
   display: flex;
   align-items: center;
@@ -103,7 +103,7 @@ button:active {
 }
 
 .toast-text {
-  color: rgb(88, 48, 110);
+  color: rgb(63, 33, 84);
   font-weight: bold;
   font-size: 12px;
 }
@@ -118,9 +118,9 @@ button:active {
   width: 100%;
   height: 64px;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 250, 248, 0.7);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgb(241, 209, 225);
+  border-bottom: 1px solid rgba(63, 33, 84, 0.14);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -142,8 +142,8 @@ button:active {
   height: 40px;
   border-radius: 12px;
   object-fit: cover;
-  border: 1px solid rgb(241, 209, 225);
-  background: white;
+  border: 1px solid rgba(63, 33, 84, 0.14);
+  background: rgb(255, 250, 248);
 }
 
 .brand-meta {
@@ -152,13 +152,13 @@ button:active {
 }
 
 .brand-title {
-  color: rgb(88, 48, 110);
+  color: rgb(63, 33, 84);
   font-size: 15px;
   font-weight: bold;
 }
 
 .brand-subtitle {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 12px;
   font-weight: bold;
 }
@@ -176,10 +176,10 @@ button:active {
   min-width: 40px;
   height: 40px;
   padding: 12px;
-  background: rgb(255, 255, 255);
-  color: rgb(88, 48, 110);
+  background: rgb(255, 250, 248);
+  color: rgb(63, 33, 84);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   font-size: 15px;
   font-weight: bold;
   display: flex;
@@ -192,12 +192,13 @@ button:active {
 .cta-button {
   background: rgb(234, 92, 157);
   border-color: rgb(234, 92, 157);
-  color: white;
+  color: rgb(255, 250, 248);
 }
 
 .soft-button {
-  background: rgb(252, 233, 243);
+  background: rgba(234, 92, 157, 0.12);
   color: rgb(234, 92, 157);
+  border-color: rgba(234, 92, 157, 0.25);
 }
 
 .link-button {
@@ -215,9 +216,9 @@ button:active {
 
 .qa-card {
   padding: 12px;
-  background: rgb(255, 255, 255);
+  background: rgb(255, 250, 248);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -228,10 +229,10 @@ button:active {
   width: 40px;
   height: 40px;
   padding: 12px;
-  background: white;
-  color: rgb(88, 48, 110);
+  background: rgb(255, 250, 248);
+  color: rgb(63, 33, 84);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -240,6 +241,7 @@ button:active {
   gap: 10px;
 }
 
+/* رنگ‌های اختصاصی شبکه‌های اجتماعی (طبق درخواست شما) */
 .qa-instagram {
   background: rgb(255, 238, 243);
   color: rgb(225, 68, 141);
@@ -270,8 +272,8 @@ button:active {
 
 .panel {
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
-  background: rgb(255, 255, 255);
+  border: 1px solid rgba(63, 33, 84, 0.14);
+  background: rgb(255, 250, 248);
   padding: 12px;
 }
 
@@ -279,19 +281,19 @@ button:active {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
-  color: rgb(88, 48, 110);
+  color: rgb(63, 33, 84);
 }
 
 .hero-text {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 15px;
   margin-bottom: 12px;
 }
 
 .gallery-card {
-  background: white;
+  background: rgb(255, 250, 248);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   position: relative;
   overflow: hidden;
   touch-action: pan-y;
@@ -321,8 +323,8 @@ button:active {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgb(241, 209, 225);
+  background: rgba(255, 250, 248, 0.78);
+  border: 1px solid rgba(63, 33, 84, 0.14);
 }
 
 .gallery-dot.active {
@@ -345,11 +347,11 @@ button:active {
 .panel-title {
   font-size: 15px;
   font-weight: bold;
-  color: rgb(88, 48, 110);
+  color: rgb(63, 33, 84);
 }
 
 .section-hint {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 12px;
   font-weight: bold;
 }
@@ -362,15 +364,15 @@ button:active {
 }
 
 .help-panel {
-  border: 1px solid rgb(241, 209, 225);
-  background: rgb(252, 233, 243);
+  border: 1px solid rgba(234, 92, 157, 0.25);
+  background: rgba(234, 92, 157, 0.12);
   border-radius: 12px;
   padding: 12px;
 }
 
 .help-list {
   padding-right: 18px;
-  color: rgb(158, 115, 177);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 12px;
   list-style: disc;
   display: flex;
@@ -398,12 +400,12 @@ button:active {
 }
 
 .block-title {
-  color: rgb(126, 83, 153);
+  color: rgba(63, 33, 84, 0.78);
   font-weight: bold;
 }
 
 .block-hint {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 15px;
   font-weight: bold;
 }
@@ -416,7 +418,7 @@ button:active {
 
 .field-label {
   font-weight: bold;
-  color: rgb(126, 83, 153);
+  color: rgba(63, 33, 84, 0.78);
   font-size: 15px;
 }
 
@@ -424,10 +426,10 @@ button:active {
   width: 100%;
   min-height: 80px;
   padding: 12px;
-  background: white;
-  color: rgb(112, 70, 138);
+  background: rgb(255, 250, 248);
+  color: rgba(63, 33, 84, 0.84);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   font-size: 15px;
   resize: vertical;
 }
@@ -452,10 +454,10 @@ button:active {
 
 .chip {
   padding: 12px;
-  background: rgb(255, 245, 241);
-  color: rgb(88, 48, 110);
+  background: rgba(63, 33, 84, 0.06);
+  color: rgb(63, 33, 84);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   font-size: 12px;
   font-weight: bold;
   display: flex;
@@ -470,8 +472,8 @@ button:active {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 1px solid rgb(241, 209, 225);
-  background: white;
+  border: 1px solid rgba(63, 33, 84, 0.14);
+  background: rgb(255, 250, 248);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,14 +489,14 @@ button:active {
 .chip.selected .chip-icon {
   background: rgb(234, 92, 157);
   border-color: rgb(234, 92, 157);
-  color: white;
+  color: rgb(255, 250, 248);
 }
 
 .summary-panel {
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   border-radius: 12px;
   padding: 12px;
-  background: rgb(255, 245, 241);
+  background: rgba(63, 33, 84, 0.06);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -509,11 +511,11 @@ button:active {
 
 .summary-label {
   font-weight: bold;
-  color: rgb(126, 83, 153);
+  color: rgba(63, 33, 84, 0.78);
 }
 
 .helper-text {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 15px;
   display: flex;
   justify-content: center;
@@ -529,10 +531,10 @@ button:active {
 }
 
 .faq-item {
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   border-radius: 12px;
   padding: 12px;
-  background: rgb(255, 245, 241);
+  background: rgba(63, 33, 84, 0.06);
 }
 
 .faq-item summary {
@@ -557,11 +559,11 @@ button:active {
 }
 
 .faq-q i {
-  color: rgb(131, 82, 183);
+  color: rgba(63, 33, 84, 0.84);
 }
 
 .faq-chevron {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   transition: transform 160ms ease;
 }
 
@@ -571,14 +573,14 @@ button:active {
 
 .faq-item p {
   margin-top: 8px;
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 12px;
 }
 
 .page-footer {
   width: 100%;
-  background: rgb(255, 255, 255);
-  border-top: 1px solid rgba(241, 209, 225, 0.85);
+  background: rgb(255, 250, 248);
+  border-top: 1px solid rgba(63, 33, 84, 0.14);
   display: flex;
   flex-direction: column;
   scroll-margin-top: 74px;
@@ -602,12 +604,12 @@ button:active {
 .footer-title {
   font-size: 15px;
   font-weight: bold;
-  color: rgb(88, 48, 110);
+  color: rgb(63, 33, 84);
 }
 
 .footer-note,
 .footer-text {
-  color: rgb(147, 103, 170);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 12px;
 }
 
@@ -621,16 +623,16 @@ button:active {
 
 .footer-card {
   width: 100%;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   border-radius: 12px;
-  background: rgba(145, 93, 193, 0.12);
+  background: rgba(63, 33, 84, 0.06);
   padding: 12px;
 }
 
 .footer-card-title {
   font-weight: bold;
   font-size: 15px;
-  color: rgb(88, 48, 110);
+  color: rgb(63, 33, 84);
   margin-bottom: 10px;
 }
 
@@ -644,10 +646,10 @@ button:active {
 .footer-link {
   width: 100%;
   padding: 12px;
-  background: rgb(255, 245, 241);
-  color: rgb(88, 48, 110);
+  background: rgba(63, 33, 84, 0.06);
+  color: rgb(63, 33, 84);
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -655,6 +657,7 @@ button:active {
   gap: 10px;
 }
 
+/* لینک‌های اختصاصی پایین صفحه (همان رنگ‌های اختصاصی قبلی) */
 .footer-link-phone {
   background: rgb(244, 236, 255);
   color: rgb(133, 92, 194);
@@ -678,7 +681,7 @@ button:active {
   list-style: disc;
   display: flex;
   flex-direction: column;
-  color: rgb(158, 115, 177);
+  color: rgba(63, 33, 84, 0.62);
   font-size: 12px;
 }
 
@@ -686,7 +689,7 @@ button:active {
   width: 100%;
   height: 240px;
   border-radius: 12px;
-  border: 1px solid rgb(241, 209, 225);
+  border: 1px solid rgba(63, 33, 84, 0.14);
   overflow: hidden;
 }
 
@@ -695,8 +698,8 @@ button:active {
   height: auto;
   padding: 12px;
   background: rgba(0, 0, 0, 0);
-  color: rgb(145, 93, 193);
-  border-top: 1px solid rgba(241, 209, 225, 0.85);
+  color: rgba(63, 33, 84, 0.62);
+  border-top: 1px solid rgba(63, 33, 84, 0.14);
   font-size: 14px;
   display: flex;
   justify-content: center;
@@ -715,7 +718,7 @@ button:active {
 
 @media (min-width: 800px) {
   .app {
-    border-left: 1px solid rgba(241, 209, 225, 0.85);
-    border-right: 1px solid rgba(241, 209, 225, 0.85);
+    border-left: 1px solid rgba(63, 33, 84, 0.14);
+    border-right: 1px solid rgba(63, 33, 84, 0.14);
   }
 }
